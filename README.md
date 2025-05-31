@@ -69,7 +69,7 @@ numpy            1.21.6
 networkx         2.6.3
 scipy            1.7.3
 torch            1.12.1+cu113
-dgl-cu113        0.8.1
+dgl-cu113        0.9.1
 tqdm             4.67.1
 matplotlib       3.5.3
 seaborn          0.12.2
