@@ -10,6 +10,8 @@
 - 📦 [项目地址（GitHub）](https://github.com/AI4Risk/antifraud)
 
 ---
+## 说明
+> 运行 python feature_engineering/data_process.py 以预处理论文模型所需数据集。
 
 ## 📁 项目结构
 
@@ -22,6 +24,27 @@
 - `requirements.txt`: 依赖项;
 - `different_models_test`:论文模型和经典机器学习模型训练测试结果notebook展示;
 - `exportToHTML`:html文件
+
+### Data Description
+
+有三个数据集，YelpChi、Amazon 和 S-FFSD，用于模型实验。
+
+<!-- YelpChi and Amazon can be downloaded from [here](https://github.com/YingtongDou/CARE-GNN/tree/master/data) or [dgl.data.FraudDataset](https://docs.dgl.ai/api/python/dgl.data.html#fraud-dataset).
+
+Put them in `/data` directory and run `unzip /data/Amazon.zip` and `unzip /data/YelpChi.zip` to unzip the datasets. -->
+
+YelpChi 和 Amazon 数据集来自 [CARE-GNN](https://dl.acm.org/doi/abs/10.1145/3340531.3411903),其原始源数据可以在这里找到 [this repository](https://github.com/YingtongDou/CARE-GNN/tree/master/data).
+
+S-FFSD 是金融欺诈半监督数据集的模拟和小型版本。S-FFSD 的描述如下：
+|Name|Type|Range|Note|
+|--|--|--|--|
+|Time|np.int32|from $\mathbf{0}$ to $\mathbf{N}$|$\mathbf{N}$ denotes the number of trasactions.  |
+|Source|string|from $\mathbf{S_0}$ to $\mathbf{S}_{ns}$|$ns$ denotes the number of transaction senders.|
+|Target|string|from $\mathbf{T_0}$  to $\mathbf{T}_{nt}$ | $nt$ denotes the number of transaction reveicers.|
+|Amount|np.float32|from **0.00** to **np.inf**|The amount of each transaction. |
+|Location|string|from $\mathbf{L_0}$  to $\mathbf{L}_{nl}$ |$nl$ denotes the number of transacation locations.|
+|Type|string|from $\mathbf{TP_0}$ to $\mathbf{TP}_{np}$|$np$ denotes the number of different transaction types. |
+|Labels|np.int32|from **0** to **2**|**2** denotes **unlabeled**||
 
 ## 🚀 训练与评估
 
