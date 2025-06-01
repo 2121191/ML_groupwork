@@ -12,7 +12,7 @@
 ---
 
 ## 说明
-> 运行 python feature_engineering/data_process.py 以预处理论文模型所需数据集。
+> 先解压三个数据集，然后运行 python feature_engineering/data_process.py 以预处理论文模型所需数据集。
 
 ## 📁 项目结构
 
@@ -26,7 +26,7 @@
 - `different_models_test`:论文模型和经典机器学习模型训练测试结果notebook展示;
 - `exportToHTML`:html文件
 
-### Data Description
+### 📂 数据集描述
 
 有三个数据集，YelpChi、Amazon 和 S-FFSD，用于模型实验。
 
