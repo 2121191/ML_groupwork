@@ -13,6 +13,7 @@
 
 ## 说明
 > 先解压三个数据集，然后运行 python feature_engineering/data_process.py 以预处理论文模型所需数据集。
+> 模型参数直接在.yaml文件中更改
 
 ## 📁 项目结构
 
